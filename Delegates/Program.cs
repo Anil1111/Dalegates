@@ -1,15 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Delegates
+namespace GeeksForGeeks
 {
-    class Program
+
+      class del
     {
-        static void Main(string[] args)
+
+        public delegate void addnum(int a, int b);
+        public delegate void subnum(int a, int b);
+
+        public void sum(int a, int b)
         {
+            Console.WriteLine("(100 + 40) = {0}", a + b);
+        }
+
+       public void subtract(int a, int b)
+        {
+            Console.WriteLine("(100 - 60) = {0}", a - b);
+        }
+
+       
+        public static void Main(String[] args)
+        {
+
+             var obj = new del();
+
+           
+            addnum del_obj1 = new addnum(obj.sum);
+            subnum del_obj2 = new subnum(obj.subtract);
+
+            
+           
+
+          
+             del_obj1.Invoke(51, 50); 
+             del_obj2.Invoke(51, 50); 
         }
     }
 }
