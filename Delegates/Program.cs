@@ -1,6 +1,4 @@
 ﻿using System;
-namespace GeeksForGeeks
-{
 
       class del
     {
@@ -36,4 +34,4 @@ namespace GeeksForGeeks
              del_obj2.Invoke(51, 50); 
         }
     }
-}
+
